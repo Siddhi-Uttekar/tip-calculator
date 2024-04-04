@@ -32,7 +32,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
           var totalText = document.querySelector(".disp_total_amount");
           totalText.textContent = "";
+
+
+
         }
       });
     });
 });
+
+let inputs= document.querySelectorAll('input');
+let clears= document.querySelector(".reset");
+
+clears.addEventListener('click', ()=>{inputs.forEach( input => input.value = '');});
+
+// button.addEventListener("click", function(){document.getElementByclass(".reset").reset()});
