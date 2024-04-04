@@ -1,0 +1,47 @@
+.attribution { font-size:
+    11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body{
+    display:flex ;
+    background-color: hsl(185, 41%, 84%);
+    align-content: center;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+.container{
+    height:26rem;
+    width:50rem;
+    background-color: white;
+    border-radius: 20px;
+    padding:1em;
+
+}
+
+.inner-container{
+    height:27rem;
+    width:22rem;
+    border-radius: 20px;
+    background-color:hsl(183, 100%, 15%) ;
+    position: relative;
+    left:28rem;
+    top:-8.5rem;
+
+}
+
+.tip-container{
+    height: 8rem;
+    width: 25rem;;
+    display:flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    /* justify-content: space-around; */
+    gap:3px;
+
+}
+
+.tip-button{
+    height: 3rem;
+    width:5rem;
+}
