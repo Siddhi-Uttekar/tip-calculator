@@ -35,6 +35,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+
+          var clearButton = document.getElementsByClassName("reset");
+          clearButton.addEventListener('click', function() {
+              var tipAmountText = document.querySelector(".disp_tip_amount");
+              tipAmountText.textContent = "";
+
+              var totalText = document.querySelector(".disp_total_amount");
+              totalText.textContent = "";
+          });
         }
       });
     });
@@ -42,7 +51,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
 let inputs= document.querySelectorAll('input');
 let clears= document.querySelector(".reset");
+let tipAmountText = document.querySelectorAll(".disp_tip_amount");
+let totalText = document.querySelectorAll(".disp_total_amount");
 
-clears.addEventListener('click', ()=>{inputs.forEach( input => input.value = '');});
 
-// button.addEventListener("click", function(){document.getElementByclass(".reset").reset()});
+clears.addEventListener('click', ()=>{inputs.forEach( input => input.value = ''); });
+
+clears.addEventListener('click', ()=>{tipAmountText.forEach(element => element.textContent = "");});
+
+clears.addEventListener('click', ()=>{tipAmountText.forEach(element => element.textContent = "$0.00");});
+
+clears.addEventListener('click', ()=>{totalText.forEach(element => element.textContent = "$0.00");});
+
+
+
