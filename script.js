@@ -1,53 +1,49 @@
-
-
 document.addEventListener("DOMContentLoaded", function() {
-    var tip_buttons = document.querySelectorAll(".tip-button");
+  let tip_buttons = document.querySelectorAll(".tip-button");
+  let errorLabel = document.querySelector(".error");
+  let inputField = document.querySelector("input[name='people']");
 
-    tip_buttons.forEach(function(button) {
+
+  tip_buttons.forEach(function(button) {
       button.addEventListener("click", function() {
-        var bill = parseFloat(document.querySelector("input[name='bill']").value);
-        var tipPercentage;
+          let bill = parseFloat(document.querySelector("input[name='bill']").value);
+          let tipPercentage;
 
-        if (this.id === "custom") {
-          tipPercentage = parseFloat(document.querySelector("input[name='custom']").value) || 0; // Provide default value for custom tip
-        } else {
-          tipPercentage = parseFloat(this.textContent);
-        }
+          if (this.id === "custom-tip") {
+              tipPercentage = parseFloat(document.querySelector("input[placeholder='CUSTOM']").value); // Provide default value for custom tip
+          } else {
+              tipPercentage = parseFloat(this.textContent);
+          }
 
-        var no_of_people = parseInt(document.querySelector("input[name='people']").value);
+          let no_of_people = parseInt(inputField.value);
 
-        if (!isNaN(bill) && !isNaN(tipPercentage) && !isNaN(no_of_people) && no_of_people > 0) {
-          var tip_amt_per_person = (tipPercentage / 100) * bill / no_of_people;
-          var total_per_person = (bill / no_of_people) + tip_amt_per_person;
+          if (no_of_people < 1) {
+              // Show the error label and highlight the input field
+              errorLabel.style.display = 'flex';
+              inputField.style.border = '2px solid red';
+          } else {
+              // Hide the error label and reset the input field style
+              errorLabel.style.display = 'none';
+              inputField.style.border = 'none';
 
-          var tipAmountText = document.querySelector(".disp_tip_amount");
-          tipAmountText.textContent = "$" + tip_amt_per_person.toFixed(2);
+              if (!isNaN(bill) && !isNaN(tipPercentage) && !isNaN(no_of_people) && no_of_people > 0) {
+                  let tip_amt_per_person = (tipPercentage / 100) * bill / no_of_people;
+                  let total_per_person = (bill / no_of_people) + tip_amt_per_person;
 
-          var totalText = document.querySelector(".disp_total_amount");
-          totalText.textContent = "$" + total_per_person.toFixed(2);
-        } else {
-          // If any of the inputs are invalid or number of people is zero, clear the displayed values
-          var tipAmountText = document.querySelector(".disp_tip_amount");
-          tipAmountText.textContent = "";
+                  let tipAmountText = document.querySelector(".disp_tip_amount");
+                  tipAmountText.textContent = "$" + tip_amt_per_person.toFixed(2);
 
-          var totalText = document.querySelector(".disp_total_amount");
-          totalText.textContent = "";
-
-
-
-
-          var clearButton = document.getElementsByClassName("reset");
-          clearButton.addEventListener('click', function() {
-              var tipAmountText = document.querySelector(".disp_tip_amount");
-              tipAmountText.textContent = "";
-
-              var totalText = document.querySelector(".disp_total_amount");
-              totalText.textContent = "";
-          });
-        }
+                  let totalText = document.querySelector(".disp_total_amount");
+                  totalText.textContent = "$" + total_per_person.toFixed(2);
+              }
+          }
       });
-    });
+  });
 });
+
+
+
+
 
 let inputs= document.querySelectorAll('input');
 let clears= document.querySelector(".reset");
@@ -62,6 +58,3 @@ clears.addEventListener('click', ()=>{tipAmountText.forEach(element => element.t
 clears.addEventListener('click', ()=>{tipAmountText.forEach(element => element.textContent = "$0.00");});
 
 clears.addEventListener('click', ()=>{totalText.forEach(element => element.textContent = "$0.00");});
-
-
-

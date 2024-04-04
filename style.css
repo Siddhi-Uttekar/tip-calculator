@@ -11,8 +11,8 @@ body{
 }
 
 .container{
-    height:26rem;
-    width:50rem;
+    height:24rem;
+    width:45rem;
     background-color: white;
     border-radius: 20px;
     padding:1em;
@@ -20,28 +20,44 @@ body{
 }
 
 .inner-container{
-    height:27rem;
-    width:22rem;
+    height:23rem;
+    width:23rem;
     border-radius: 20px;
     background-color:hsl(183, 100%, 15%) ;
     position: relative;
-    left:28rem;
-    top:-8.5rem;
+    left:21rem;
+    bottom: 20.75rem;
+    /* padding-left:2rem; */
 
 }
 
 .tip-container{
     height: 8rem;
-    width: 25rem;;
+    width: 20rem;;
     display:flex;
     flex-wrap: wrap;
     overflow: hidden;
-    /* justify-content: space-around; */
-    gap:3px;
+    justify-content: space-around;
+    gap:1px;
 
 }
 
 .tip-button{
-    height: 3rem;
-    width:5rem;
+    height: 2rem;
+    width:6rem;
+    gap:1rem;
+    border-radius: 7px;
+}
+
+.tip-custom{
+    height: 1.70rem;
+    width:5.5rem;
+    border-radius: 7px;
+
+}
+
+input{
+    width: 19rem;
+    height: 2rem;
+    background-color: hsl(189, 41%, 97%);
 }

@@ -13,24 +13,28 @@
 
   <div class="container">
 
-  Bill
+  <div>Bill</div>
 
   <input name="bill" type="number" id="integer" />
 
-  Select Tip %
+  <p>Select Tip %</p>
   <div class="tip-container">
   <button class="tip-button">5%</button>
   <button class="tip-button">10%</button>
   <button class="tip-button">15%</button>
   <button class="tip-button">25%</button>
   <button class="tip-button">50%</button>
-  <div id="custom-tip"></div><input name="custom" type="number" id="integer" />
+  <div id="custom-tip"><input type="number" class="tip-custom" placeholder="CUSTOM" /></div>
 </div>
 
 <div class="no.ofpeople">
   <p>Number of People</p>
+  <div id="nonzero"></div>
   <div id="people-input">
   <input name="people" type="number" id="integer" />
+
+  <label for="" class="error" style="display: none;">can't be zero</label>
+
  </div>
  </div>
 
