@@ -16,6 +16,9 @@ body{
     background-color: white;
     border-radius: 20px;
     padding:1em;
+    font-family: "Space Mono", monospace;
+    font-size: 22px;
+    position: fixed;
 
 }
 
@@ -25,9 +28,13 @@ body{
     border-radius: 20px;
     background-color:hsl(183, 100%, 15%) ;
     position: relative;
-    left:21rem;
-    bottom: 20.75rem;
+    left:21.5rem;
+    bottom: 20.7rem;
     /* padding-left:2rem; */
+    font-family: "Space Mono", monospace;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
 
 }
 
@@ -39,6 +46,8 @@ body{
     overflow: hidden;
     justify-content: space-around;
     gap:1px;
+    font-family: "Space Mono", monospace;
+    font-size: 22px;
 
 }
 
@@ -47,17 +56,89 @@ body{
     width:6rem;
     gap:1rem;
     border-radius: 7px;
+    background-color: hsl(183, 100%, 15%);
+    color: rgb(251, 253, 255);
+    font-family: "Space Mono", monospace;
+    font-size: 22px;
+    font-weight: 200;
 }
 
 .tip-custom{
     height: 1.70rem;
     width:5.5rem;
     border-radius: 7px;
-
+    font-family: "Space Mono", monospace;
+    font-size: 22px;
 }
 
 input{
     width: 19rem;
     height: 2rem;
-    background-color: hsl(189, 41%, 97%);
+    background-color: hsl(180, 33%, 91%);
+    border: 2px solid  hsl(0, 0%, 100%);
+    font-family: "Space Mono", monospace;
+}
+
+/*
+input:focus{
+   background-color:  hsl(189, 41%, 97%);
+   font-family: "Space Mono", monospace;
+border: 2px solid  hsl(172, 67%, 45%);
+font-size: 22px;
+} */
+
+.text{
+    color: hsl(180, 12%, 62%);
+    font-size: 16px;
+}
+
+.text-2{
+    color: hsl(0, 0%, 100%);
+    font-size: 18px;
+}
+
+.disp_tip_amount{
+    color: hsl(183, 42%, 54%);
+    font-size: 32px;
+    font-family: "Space Mono", monospace;
+    font-weight: 600;
+    margin-left: 7rem;
+
+}
+
+.disp_total_amount{
+    color: hsl(183, 42%, 54%);
+    font-size: 32px;
+    font-family: "Space Mono", monospace;
+    font-weight: 600;
+    margin-left: 9.25rem;
+}
+
+
+
+
+ .tip-amount{
+    display: flex;
+    padding: 2rem;
+
+}
+
+.total-amount{
+    padding: 2rem;
+    display: flex;
+    margin-top: -5rem;
+
+}
+
+ .reset{
+    height:2rem;
+    width:20rem;
+    margin-top: 20rem;
+    margin-left: 37.5rem;
+    z-index: 1;
+    position: relative;
+    border-radius: 5px;
+    font-family: "Space Mono", monospace;
+    font-weight: 600;
+    font-size: 18px;
 }

@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
   tip_buttons.forEach(function(button) {
       button.addEventListener("click", function() {
           let bill = parseFloat(document.querySelector("input[name='bill']").value);
+
+
           let tipPercentage;
 
           if (this.id === "custom-tip") {
@@ -39,9 +41,33 @@ document.addEventListener("DOMContentLoaded", function() {
           }
       });
   });
+
+  let buttons = document.querySelectorAll('.tip-button');
+
+buttons.forEach(button => {
+    button.addEventListener("click", function() {
+        // Reset styles for all buttons
+        buttons.forEach(btn => {
+            btn.style.backgroundColor = "";
+            btn.style.color = "";
+            btn.style.fontFamily = "";
+        });
+
+        // Apply styles for the clicked button
+        this.style.backgroundColor = "hsl(185, 41%, 84%)";
+        this.style.color = "hsl(183, 100%, 15%)";
+        this.style.fontFamily = "Space Mono, monospace";
+    });
+
+  
+
+
+
+
+
 });
 
-
+});
 
 
 
