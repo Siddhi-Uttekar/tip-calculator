@@ -12,10 +12,9 @@ document.addEventListener("DOMContentLoaded", function() {
           let tipPercentage;
 
           if (this.id === "custom-tip") {
-              tipPercentage = parseFloat(document.querySelector("input[placeholder='CUSTOM']").value); // Provide default value for custom tip
-          } else {
-              tipPercentage = parseFloat(this.textContent);
-          }
+            console.log("Custom button clicked");
+            // Rest of your code
+        }
 
           let no_of_people = parseInt(inputField.value);
 
@@ -59,7 +58,7 @@ buttons.forEach(button => {
         this.style.fontFamily = "Space Mono, monospace";
     });
 
-  
+
 
 
 
